@@ -1,6 +1,6 @@
 // create_wallets_and_deposit.cdc
 
-import MultiFungibleToken from
+import MultiFungibleToken from 0x229e7617283d5085
 
 transaction()
 {

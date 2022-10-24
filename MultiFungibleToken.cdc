@@ -1,5 +1,5 @@
 import FungibleToken from 0xf233dcee88fe0abe
-import MetadataViews from 0xebf4ae01d1284af8 // Only used for initializing MultiFungibleTokenReceiverPath
+//import MetadataViews from 0x8ea44ab931cac762 // Only used for initializing MultiFungibleTokenReceiverPath
 
 // Supported FungibleTokens
 import FUSD from 0x3c5959b568896393
@@ -140,8 +140,9 @@ pub contract MultiFungibleToken
     }    
     // Contract Init ---------------------------------------------------------------------------------
     init() {
-        self.MultiFungibleTokenReceiverPath  = MetadataViews.getRoyaltyReceiverPublicPath()
+        self.MultiFungibleTokenReceiverPath  = /public/GenericFTReceiver // taken from MetadataViews
         self.MultiFungibleTokenStoragePath   = /storage/MultiFungibleTokenManager
         self.MultiFungibleTokenBalancePath   = /public/MultiFungibleTokenBalance
     }
 }
+ 
